@@ -1,6 +1,6 @@
 enabled: true
 namespace: openshift-operators
-name: devops-operator-group
+name: openshift-pipelines-operator
 subscription:
   channel: latest
   approval: Automatic
