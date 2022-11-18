@@ -1,6 +1,5 @@
 namespace: devops-operators
 
-
 sealed-secrets:
   # Disabled by default
   enabled: true
@@ -14,14 +13,3 @@ sealed-secrets:
     enabled: false
   commandArgs:
     - "--update-status=true"
-
-stackrox-chart:
-  enabled: true
-  stackrox:
-    clusterName: devops
-    namespace: stackrox
-
-gitops-operator:
-  enabled: true
-  namespaces: []
-  ignoreHelmHooks: false

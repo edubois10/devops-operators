@@ -1,0 +1,7 @@
+namespace: devops-operators
+
+stackrox-chart:
+  enabled: true
+  stackrox:
+    clusterName: devops
+    namespace: stackrox
