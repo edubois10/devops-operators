@@ -1,0 +1,11 @@
+enabled: true
+namespace: openshift-logging
+name: cluster-logging-operator
+subscription:
+  channel: stable-5.3
+  approval: Automatic
+  operatorName: cluster-logging
+  sourceName: redhat-operators
+  sourceNamespace: openshift-marketplace
+operatorgroup:
+  create: false

@@ -1,0 +1,11 @@
+enabled: true
+namespace: openshift-operators
+name: cert-utils-operator
+subscription:
+  channel: alpha
+  approval: Automatic
+  operatorName: cert-utils-operator
+  sourceName: community-operators
+  sourceNamespace: openshift-marketplace
+operatorgroup:
+  create: false

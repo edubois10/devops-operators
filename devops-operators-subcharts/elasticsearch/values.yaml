@@ -1,0 +1,10 @@
+enabled: true
+namespace: openshift-operators
+subscription:
+  channel: stable-5.3
+  approval: Automatic
+  operatorName: elasticsearch-operator
+  sourceName: redhat-operators
+  sourceNamespace: openshift-marketplace
+operatorgroup:
+  create: false
