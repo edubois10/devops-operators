@@ -1,13 +1,11 @@
-namespace: devops-operators
-
-openshift-pipelines-operator-rh:
-    enabled: true
-    namespace: openshift-operators
-    subscription:
-      channel: latest
-      approval: Automatic
-      operatorName: openshift-pipelines-operator-rh
-      sourceName: redhat-operators
-      sourceNamespace: openshift-marketplace
-    operatorgroup:
-      create: false
+enabled: true
+namespace: openshift-operators
+name: devops-operator-group
+subscription:
+  channel: latest
+  approval: Automatic
+  operatorName: openshift-pipelines-operator-rh
+  sourceName: redhat-operators
+  sourceNamespace: openshift-marketplace
+operatorgroup:
+  create: true
