@@ -1,0 +1,14 @@
+{{ if eq ($value.enabled | toString) "true" }}
+{{- if $value.operatorgroup.create }}
+---
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  name: {{ $key | default "devops-operator-group" | quote }}
+  namespace: {{ $value.namespace | quote }}
+spec:
+  targetNamespaces:
+  - {{ $value.namespace }}
+{{- end }}
+{{- end }}
+
