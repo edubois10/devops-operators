@@ -8,4 +8,4 @@ subscription:
   sourceName: redhat-operators
   sourceNamespace: openshift-marketplace
 operatorgroup:
-  create: true
+  create: false
