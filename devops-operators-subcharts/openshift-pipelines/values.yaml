@@ -3,9 +3,15 @@ namespace: openshift-operators
 name: openshift-pipelines-operator
 subscription:
   channel: latest
-  approval: Automatic
+  approval: automatic
   operatorName: openshift-pipelines-operator-rh
   sourceName: redhat-operators
   sourceNamespace: openshift-marketplace
 operatorgroup:
   create: false
+
+#/!\
+# The operator doesn't support to be deployed in another namespace than openshift-operators.
+# Installing an operator with manual approval causes all operators installed in namespace 
+# openshift-operators to function as manual approval strategy. To allow automatic approval, 
+# all operators installed in the namespace must use automatic approval strategy.
