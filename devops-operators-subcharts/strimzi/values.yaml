@@ -7,6 +7,6 @@ subscription:
   operatorName: strimzi-kafka-operator
   sourceName: community-operators
   sourceNamespace: openshift-marketplace
-  csv: strimzi-cluster-operator.v0.32.0
+  #csv: strimzi-cluster-operator.v0.34.0
 operatorgroup:
   create: false
