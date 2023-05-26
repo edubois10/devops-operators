@@ -1,7 +1,10 @@
-namespace: devops-operators
-
-stackrox-chart:
-  enabled: true
-  stackrox:
-    clusterName: devops
-    namespace: stackrox
+enabled: true
+namespace: rhacs-operator
+name: rhacs-operator 
+subscription:
+  channel: stable
+  approval: manual
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace
+operatorgroup:
+  create: false

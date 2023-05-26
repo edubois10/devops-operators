@@ -1,6 +1,6 @@
 apiVersion: v2
 name: stackrox
-description: A Helm chart for Kubernetes
+description: Helm chart to deploy Advanced Cluster Security for Kuberetes operator 
 
 # A chart can be either an 'application' or a 'library' chart.
 #
@@ -22,9 +22,3 @@ version: 0.1.0
 # follow Semantic Versioning. They should reflect the version the application is using.
 # It is recommended to use it with quotes.
 appVersion: "1.16.0"
-
-dependencies:
-  - name: stackrox-chart
-    version: "0.0.6"
-    repository: https://redhat-cop.github.io/helm-charts
-    condition: stackrox-chart.enabled
