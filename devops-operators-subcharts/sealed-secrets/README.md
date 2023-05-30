@@ -1,4 +1,10 @@
 # Sealed Secrets
+In the world of GitOps, we follow the rule: "If it's not in Git, it's not real." But, this rule brings a challenge when it comes to managing and storing sensitive data like credentials. Git repositories are accessible to many people, making it crucial to ensure the security of sensitive data stored within.
+
+While Kubernetes offers a mechanism for managing secrets, its method of storing sensitive data as a base64 string is not adequately secure. Base64 is an encoding, not an encryption method, meaning anyone can easily decode a base64 string and gain access to the underlying data. Consequently, it's not advisable to openly store Secret manifest files.
+
+To resolve this issue, we leverage an open-source tool known as Sealed Secrets.
+
 The Sealed Secrets project is an open-source tool by Bitnami Labs, designed to solve the problem of managing sensitive information – such as credentials, passwords, or certificates – that needs to be used in a Kubernetes environment. It lets you safely store and manage Kubernetes Secrets in Git repositories, which is otherwise risky due to their sensitive nature.
 
 Sealed Secrets are composed of a **controller** and **kubeseal** a CLI:
@@ -17,9 +23,10 @@ This provides a simple and secure method to store and manage Kubernetes Secrets,
 Download Kubeseal:
 ```
 brew install kubseal
-
-#or download binary in main page
-https://github.com/bitnami-labs/sealed-secrets
+# Linux: download tarfile from 
+https://github.com/bitnami-labs/sealed-secrets/releases/tag/v0.21.0
+# Mac OS
+Brew install kubeseal
 ```
 ### Command exmaple
 ```
